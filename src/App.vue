@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <v-header></v-header>
+    <div class="header">
+      I am header
+    </div>
     <div class="content">
       I am content
     </div>
@@ -8,11 +10,7 @@
 </template>
 
 <script>
-import header from 'components/header'
 export default {
-  components: {
-    'v-header': header
-  }
 }
 
 </script>
