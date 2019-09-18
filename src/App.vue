@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <v-header :seller="seller"></v-header>
     <div class="header">
       I am header
     </div>
@@ -9,8 +10,12 @@
   </div>
 </template>
 
-<script>
+<script type="text/ecmascript-6">
+import header from './components/header'
 export default {
+  components: {
+    'v-header': header
+  }
 }
 
 </script>
