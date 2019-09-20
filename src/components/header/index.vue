@@ -4,12 +4,12 @@
     </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
 export default {
 
 }
 </script>
 
-<style scoped lang="sytlus" rel="stylesheet/stylus">
+<style scoped>
 
 </style>
