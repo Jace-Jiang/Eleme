@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Vheader></Vheader>
     <div class="content">
         I am content
     </div>
@@ -9,9 +10,11 @@
 
 <script>
 import InputNumber from '_c/input-number'
+import Vheader from '_c/vheader'
 export default {
   components: {
-    InputNumber
+    InputNumber,
+    Vheader
   }
 }
 </script>
