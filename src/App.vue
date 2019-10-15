@@ -13,7 +13,7 @@
         </div>
     </div>
     <keep-alive>
-      <router-view></router-view>
+      <router-view :seller="seller"></router-view>
     </keep-alive>
 
     <input-number :max="10" :min="0" :step="2"></input-number>
@@ -23,7 +23,26 @@
 <script>
 import InputNumber from '_c/input-number'
 import Vheader from '_c/vheader'
+
+const ERR_OK = 0
+
 export default {
+  data() {
+    return {
+      seller: {
+
+      }
+    }
+  },
+  created() {
+    this.$http.get('api/seller').then((response) => { // 返回一个成功的钩子函数
+      response = response.body // 拿到mock数据，(json对象,api文档变更了，json传的是一个promise，用body传Object）
+      if (response.errno === ERR_OK) {
+        this.seller = response.data()
+        console.log(this.seller)
+      }
+    })
+  },
   components: {
     InputNumber,
     Vheader

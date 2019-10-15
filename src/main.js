@@ -4,7 +4,9 @@ import router from './router'
 import store from './store'
 import iview from 'iview'
 import 'iview/dist/styles/iview.css'
+import VueResource from 'vue-resource'
 Vue.use(iview)
+Vue.use(VueResource)
 
 new Vue({
   router,
