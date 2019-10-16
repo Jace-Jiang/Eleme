@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Vheader></Vheader>
+    <Vheader :seller="seller"></Vheader>
     <div class="tab">
         <div class="tab-item">
           <router-link to="/goods">商品</router-link>
@@ -13,7 +13,7 @@
         </div>
     </div>
     <keep-alive>
-      <router-view :seller="seller"></router-view>
+      <router-view></router-view>
     </keep-alive>
 
     <input-number :max="10" :min="0" :step="2"></input-number>
@@ -38,6 +38,7 @@ export default {
     this.$http.get('api/seller').then((response) => { // 返回一个成功的钩子函数
       response = response.body // 拿到mock数据，(json对象,api文档变更了，json传的是一个promise，用body传Object）
       if (response.errno === ERR_OK) {
+        debugger
         this.seller = response.data()
         console.log(this.seller)
       }
