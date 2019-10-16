@@ -1,7 +1,7 @@
 <template>
     <div class="header">
-      <div class="avator">
-        <img width="64" height="64" :src="seller.avator">
+      <div class="avatar">
+        <img width="64" height="64" :src="seller.avatar">
       </div>
     </div>
 </template>
