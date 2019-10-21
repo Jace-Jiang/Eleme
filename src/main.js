@@ -4,11 +4,11 @@ import router from './router'
 import store from './store'
 import iview from 'iview'
 import 'iview/dist/styles/iview.css'
+// require('./mock/mock.js')
 import VueResource from 'vue-resource'
-import mockjs from 'mockjs'
+
 Vue.use(iview)
 Vue.use(VueResource)
-Vue.use(mockjs)
 
 new Vue({
   router,

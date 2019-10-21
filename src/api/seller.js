@@ -1,8 +1,8 @@
 import axios from '@/lib/api.request'
 
-export const getsSeller = (query) => {
+export const getSeller = (query) => {
   return axios.request({
-    url: 'seller/sel',
+    url: '/seller',
     method: 'get',
     params: query
   })

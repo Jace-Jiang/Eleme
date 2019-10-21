@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Vheader></Vheader>
+    <Vheader :seller="seller"></Vheader>
     <div class="tab">
         <div class="tab-item">
           <router-link to="/goods">商品</router-link>
@@ -23,11 +23,14 @@
 <script>
 import InputNumber from '_c/input-number'
 import Vheader from '_c/vheader'
-import { getSellers } from '@/api/seller'
+import { getSeller } from '@/api/seller'
 
 export default {
   data() {
     return {
+      seller: {
+
+      }
     }
   },
   components: {
@@ -35,11 +38,16 @@ export default {
     Vheader
   },
   created() {
+    this.getSellerList()
   },
-  mathods: {
+  mounted() {
+    this.getSellerList()
+  },
+  methods: {
     getSellerList() {
-      getSellers().then(resm => {
-
+      debugger
+      getSeller().then(res => {
+        this.seller = res.data
       })
     }
   }
