@@ -16,14 +16,11 @@
       <router-view></router-view>
     </keep-alive>
 
-    <input-number :max="10" :min="0" :step="2"></input-number>
   </div>
 </template>
 
 <script>
-import InputNumber from '_c/input-number'
 import Vheader from '_c/vheader'
-import { getSeller } from '@/api/seller'
 
 export default {
   data() {
@@ -34,22 +31,13 @@ export default {
     }
   },
   components: {
-    InputNumber,
     Vheader
   },
   created() {
-    this.getSellerList()
   },
   mounted() {
-    this.getSellerList()
   },
   methods: {
-    getSellerList() {
-      debugger
-      getSeller().then(res => {
-        this.seller = res.data
-      })
-    }
   }
 }
 </script>
