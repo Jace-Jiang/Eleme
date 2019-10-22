@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import { getSellers } from '@/api/seller'
 import Vheader from '_c/vheader'
 
 export default {
@@ -34,6 +35,12 @@ export default {
     Vheader
   },
   created() {
+    getSellers().then(res => {
+      debugger
+      console.log(this.seller)
+    }).catch((e) => {
+      debugger
+    })
   },
   mounted() {
   },
