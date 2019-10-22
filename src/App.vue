@@ -35,16 +35,29 @@ export default {
     Vheader
   },
   created() {
-    getSellers().then(res => {
-      debugger
-      console.log(this.seller)
-    }).catch((e) => {
-      debugger
-    })
+    // getSellers().then(res => {
+    //   debugger
+    //   console.log(this.seller)
+    // }).catch((e) => {
+    //   debugger
+    // })
+
+    // this.$http.get('/api/seller').then((response) => {
+    //   response = response.body
+    //   console.log(response)
+    // })
+
+    this.getList()
   },
   mounted() {
   },
   methods: {
+    getList() {
+      getSellers(this.seller).then(res => {
+        debugger
+        console.log(this.seller)
+      }).catch((e) => {})
+    }
   }
 }
 </script>
