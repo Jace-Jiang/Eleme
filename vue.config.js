@@ -1,4 +1,4 @@
-// import data from '@/mock/data.json'
+
 const path = require('path')
 
 const resolve = dir => {
