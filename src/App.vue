@@ -53,10 +53,13 @@ export default {
   },
   methods: {
     getList() {
-      getSellers(this.seller).then(res => {
+      getSellers().then(res => {
         debugger
-        console.log(this.seller)
-      }).catch((e) => {})
+        console.log(res)
+      }).catch((e) => {
+        debugger
+        console.log(e)
+      })
     }
   }
 }
