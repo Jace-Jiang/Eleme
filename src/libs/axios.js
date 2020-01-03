@@ -1,12 +1,12 @@
 import axios from 'axios'
 class HttpRequest {
   constructor(baseUrl) {
-    this.baseUrl = baseUrl
+    // this.baseUrl = baseUrl
     this.queue = {}
   }
   getInsideConfig() {
     const config = {
-      baseURL: this.baseUrl,
+      baseURL: '',
       headers: {
         //
       }
